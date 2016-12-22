@@ -8,6 +8,7 @@ branches:
     - master
 
 install:
+  - "pip install pyyaml"
   - "pip install coveralls"
 
 script:
