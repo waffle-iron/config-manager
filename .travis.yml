@@ -8,11 +8,10 @@ branches:
     - master
 
 install:
-  - "pip install pyyaml"
-  - "pip install coveralls"
+  - "pip install pytest-cov coveralls pyyaml"
 
 script:
-  - "coverage run --source=config_manager setup.py test"
+  - "py.test --cov config_manager"
 
 after_success:
   - "coveralls"
