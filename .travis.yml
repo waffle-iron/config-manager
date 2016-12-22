@@ -1,0 +1,17 @@
+language: python
+sudo: false
+python:
+  - "2.7"
+
+branches:
+    only:
+    - master
+
+install:
+  - "pip install coveralls"
+
+script:
+  - "coverage run --source=config_manager setup.py test"
+
+after_success:
+  - "coveralls"
